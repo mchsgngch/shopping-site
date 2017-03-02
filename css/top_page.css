@@ -30,13 +30,6 @@ body {
     text-decoration: none;
     color: #524b3b; }
 
-div .arrows {
-  background-image: url("../images/top/foot_arroehead.png");
-  background-size: 4px 6px; }
-  @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-    div .arrows {
-      background-image: url("../images/top/foot_arroehead@2x.png"); } }
-
 /*-----------------------------------------------------------
 
     ヘッダ

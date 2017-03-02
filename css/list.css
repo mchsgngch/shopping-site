@@ -1,27 +1,57 @@
 @charset "UTF-8";
+/*-----------------------------------------------------------
+
+    初期設定
+
+-----------------------------------------------------------*/
 html {
   font-size: 62.5%;
   background-color: #f9f8f6;
-  width: 80%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     html {
-      width: 60%; } }
+      width: 70%; } }
 
-/*フォント、基本色の設定*/
-header {
-  padding-top: 10px;
-  padding-bottom: 4px; }
-  header #logo {
-    text-align: center; }
-    header #logo .pc {
-      display: none; }
-  header #navi {
-    text-align: center; }
-    header #navi .sp_navi li {
-      display: inline;
-      list-style: none; }
+/*    配色設定
+-----------------------------------------------------------*/
+/*    フォントサイズの設定
+-----------------------------------------------------------*/
+/*    calc計算の定義
+-----------------------------------------------------------*/
+/*    初期化
+-----------------------------------------------------------*/
+body {
+  line-height: 1.6; }
+  body a {
+    text-decoration: none;
+    color: #524b3b; }
+
+/*-----------------------------------------------------------
+
+    ヘッダ
+    
+-----------------------------------------------------------*/
+header #logo {
+  text-align: center; }
+  header #logo .sp {
+    margin-top: 15px; }
+  header #logo .pc {
+    display: none; }
+header #navi {
+  text-align: center; }
+  header #navi .sp_navi {
+    padding-top: 20px; }
+    header #navi .sp_navi ul {
+      margin: 0;
+      padding: 0; }
+      header #navi .sp_navi ul li {
+        display: inline;
+        list-style: none;
+        margin-right: 4px; }
+        header #navi .sp_navi ul li:last-child {
+          margin-right: 0; }
     header #navi .sp_navi #sp_navi_menu {
       display: none;
       list-style: none;
@@ -31,478 +61,403 @@ header {
         background-color: #ffffff;
         border-bottom: solid 1px #f9f8f6; }
         header #navi .sp_navi #sp_navi_menu li a {
-          font-size: 24px;
-          font-size: 2.4rem;
-          text-decoration: none;
-          color: #524b3b;
+          font-size: 15px;
+          font-size: 1.5rem;
           display: block;
           padding: 10px 15px;
           text-align: left; }
-    header #navi .pc_navi {
-      display: none; }
-  @media (min-width: 600px) {
+  header #navi .pc_navi {
+    display: none; }
+@media (min-width: 550px) {
+  header {
+    padding-top: 20px;
+    overflow: hidden;
+    *zoom: 1; }
     header #logo {
       float: left;
-      width: 50%;
+      width: 33.3333%;
       text-align: left; }
       header #logo .pc {
         display: inline; }
       header #logo .sp {
         display: none; }
     header #navi {
-      float: left;
-      width: 50%;
-      text-align: right; }
+      float: right;
+      width: 66.6666%;
+      text-align: left; }
       header #navi .sp_navi {
         display: none; }
       header #navi .pc_navi {
         display: inline; }
         header #navi .pc_navi ul {
-          list-style: none; }
+          margin: 0;
+          padding: 17px 0 0;
+          list-style: none;
+          float: right;
+          text-align: left; }
           header #navi .pc_navi ul li {
             display: inline;
-            padding: 0 8px; }
-    header .clearfix::after {
-      content: '';
-      display: block;
-      clear: both; } }
+            padding: 0 4px; }
+            header #navi .pc_navi ul li a {
+              color: #524b3b;
+              font-weight: bold;
+              font-size: 15px;
+              font-size: 1.5rem;
+              /*fb、instaのアイコン*/ }
+              header #navi .pc_navi ul li a:hover {
+                color: #776d56; }
+              header #navi .pc_navi ul li a img:hover {
+                opacity: 0.75; } }
 
-section {
-  /*sidebar*/
-  /*page_top---------------------------*/ }
-  section #main {
-    /*共通書式-------------------------------*/
+/*-----------------------------------------------------------
+
+    メイン
+    
+-----------------------------------------------------------*/
+main #area01 {
+  padding: 20px 0;
+  overflow: hidden;
+  *zoom: 1;
+  /*    main_field
+  -----------------------------------------------------------*/
+  /*    sub_field (共通)
+  -----------------------------------------------------------*/
+  /*    sub_field (個別)
+  -----------------------------------------------------------*/ }
+  main #area01 #main_field {
+    margin-bottom: 10px;
     text-align: center;
     /*パンくずリスト-------------------------*/
-    /* banner */
-    /* items_list -------------------------*/
-    /* recent_items--------------------- */
-    /* shopping_guide --------------------*/ }
-    section #main #pank {
+    /* banner -------------------------------*/
+    /* items_list & recent_items-------------*/
+    /* shopping_guide -----------------------*/
+    /* PC VIEW ------------------------------*/ }
+    main #area01 #main_field .title {
+      margin: 15px 0; }
+    main #area01 #main_field h2 {
+      font-size: 1.6rem;
+      color: #8a8168;
+      font-weight: bold;
+      /*PC VIEW--------------------------------------------*/ }
+      @media (min-width: 550px) {
+        main #area01 #main_field h2 {
+          background-image: url("../images/top/bar.png");
+          background-repeat: no-repeat;
+          background-position: center; } }
+      main #area01 #main_field h2 small {
+        background-color: #f9f8f6; }
+    main #area01 #main_field #pan_list {
       text-align: left;
-      margin-bottom: 10px;
       padding: 0 5px 1px;
       background: #e8e4da;
       border: solid 3px #e8e4da;
       -moz-border-radius-topleft: 5px;
-      -moz-border-radius-topright: 5px;
-      -moz-border-radius-bottomleft: 5px;
-      -moz-border-radius-bottomright: 5px;
       -webkit-border-top-left-radius: 5px;
-      -webkit-border-top-right-radius: 5px;
-      -webkit-border-bottom-left-radius: 5px;
-      -webkit-border-bottom-right-radius: 5px;
       border-top-left-radius: 5px;
+      -moz-border-radius-topright: 5px;
+      -webkit-border-top-right-radius: 5px;
       border-top-right-radius: 5px;
+      -moz-border-radius-bottomleft: 5px;
+      -webkit-border-bottom-left-radius: 5px;
       border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px; }
-      section #main #pank ul {
+      -moz-border-radius-bottomright: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      /*パンくずリストの中身---------------*/ }
+      main #area01 #main_field #pan_list ul {
         padding-left: 0; }
-        section #main #pank ul li {
+        main #area01 #main_field #pan_list ul li {
+          font-size: 12px;
           font-size: 1.2rem;
           display: inline-block;
           color: #8a8168; }
-          section #main #pank ul li img {
+          main #area01 #main_field #pan_list ul li img {
             margin-right: 7px;
             font-size: 1.3rem; }
-          section #main #pank ul li a {
-            text-decoration: none;
-            color: #8a8168; }
-            section #main #pank ul li a:hover {
+          main #area01 #main_field #pan_list ul li a {
+            color: #8a8168;
+            /*間に挟むスラッシュ-----*/ }
+            main #area01 #main_field #pan_list ul li a:hover {
               opacity: 0.75; }
-            section #main #pank ul li a::after {
+            main #area01 #main_field #pan_list ul li a::after {
               content: " / "; }
-          section #main #pank ul li:last-child a::after {
+          main #area01 #main_field #pan_list ul li:last-child a::after {
             content: ""; }
-    section #main #banner .sp {
-      width: 100%; }
-    section #main #banner .pc {
-      display: none; }
-    @media (min-width: 600px) {
-      section #main #banner .pc {
-        display: inline;
+    main #area01 #main_field #banner {
+      margin: 15px auto; }
+      main #area01 #main_field #banner .sp {
         width: 100%; }
-      section #main #banner .sp {
-        display: none; } }
-    section #main #items_list .list_box {
-      height: auto;
+      main #area01 #main_field #banner .pc {
+        display: none; }
+      @media (min-width: 550px) {
+        main #area01 #main_field #banner .pc {
+          display: block;
+          width: 100%; }
+        main #area01 #main_field #banner .sp {
+          display: none; } }
+    main #area01 #main_field #items_list, main #area01 #main_field #recent_items {
       overflow: hidden;
-      background-color: #ffffff;
-      display: inline;
-      float: left;
-      width: -moz-calc(50% - 4px);
-      width: -o-calc(50% - 4px);
-      width: -webkit-calc(50% - 4px);
-      width: calc(50% - 4px);
-      margin: 2px; }
-      section #main #items_list .list_box a {
-        display: block;
-        text-decoration: none; }
-        section #main #items_list .list_box a:hover {
-          opacity: 0.75; }
-      section #main #items_list .list_box .list_pct {
-        width: -moz-calc(100% - 20px);
-        width: -o-calc(100% - 20px);
-        width: -webkit-calc(100% - 20px);
-        width: calc(100% - 20px);
-        margin: 10px; }
-      section #main #items_list .list_box p {
-        font-size: 12px;
-        font-size: 1.2rem;
-        text-align: left;
-        margin: 10px; }
-    section #main #items_list .clearfix::after {
-      content: '';
-      display: block;
-      clear: both; }
-    @media (min-width: 600px) {
-      section #main #items_list .list_box {
-        width: -moz-calc(33.3333% - 4px);
-        width: -o-calc(33.3333% - 4px);
-        width: -webkit-calc(33.3333% - 4px);
-        width: calc(33.3333% - 4px); } }
-    section #main #recent_items .recent_items_box {
-      height: auto;
-      overflow: hidden;
-      background-color: #ffffff;
-      display: inline;
-      float: left;
-      width: -moz-calc(50% - 4px);
-      width: -o-calc(50% - 4px);
-      width: -webkit-calc(50% - 4px);
-      width: calc(50% - 4px);
-      margin: 2px; }
-      section #main #recent_items .recent_items_box a {
-        display: block;
-        text-decoration: none; }
-        section #main #recent_items .recent_items_box a:hover {
-          opacity: 0.75; }
-      section #main #recent_items .recent_items_box .rec_pct {
-        width: -moz-calc(100% - 20px);
-        width: -o-calc(100% - 20px);
-        width: -webkit-calc(100% - 20px);
-        width: calc(100% - 20px);
-        margin: 10px; }
-      section #main #recent_items .recent_items_box p {
-        text-align: left;
-        font-size: 12px;
-        font-size: 1.2rem;
-        margin: 10px; }
-    section #main #recent_items .clearfix::after {
-      content: '';
-      display: block;
-      clear: both; }
-    @media (min-width: 600px) {
-      section #main #recent_items .recent_items_box {
-        width: -moz-calc(33.3333% - 4px);
-        width: -o-calc(33.3333% - 4px);
-        width: -webkit-calc(33.3333% - 4px);
-        width: calc(33.3333% - 4px); } }
-    section #main #recent_items #list_button {
-      margin: 15px 0 30px; }
-      section #main #recent_items #list_button ul {
-        padding: 0; }
-        section #main #recent_items #list_button ul li {
-          list-style: none; }
-          section #main #recent_items #list_button ul li a {
-            text-decoration: none;
-            display: block;
-            background: #8a8168;
-            color: #fff;
-            padding: 10px 40px;
-            text-align: center; }
-            section #main #recent_items #list_button ul li a:hover {
-              opacity: 0.75; }
-      section #main #recent_items #list_button #back_button {
-        float: left; }
-      section #main #recent_items #list_button #next_button {
-        float: right; }
-      section #main #recent_items #list_button .clearfix::after {
-        content: '';
-        display: block;
-        clear: both; }
-    section #main #shopping_guide {
-      height: auto;
-      overflow: hidden;
+      *zoom: 1;
+      /* PC VIEW---------------------------*/ }
+      main #area01 #main_field #items_list .list_box, main #area01 #main_field #items_list .recent_items_box, main #area01 #main_field #recent_items .list_box, main #area01 #main_field #recent_items .recent_items_box {
+        background-color: #ffffff;
+        display: inline;
+        float: left;
+        width: -moz-calc(50% - 2px);
+        width: -o-calc(50% - 2px);
+        width: -webkit-calc(50% - 2px);
+        width: calc(50% - 2px);
+        margin: 1px; }
+        main #area01 #main_field #items_list .list_box a, main #area01 #main_field #items_list .recent_items_box a, main #area01 #main_field #recent_items .list_box a, main #area01 #main_field #recent_items .recent_items_box a {
+          display: block; }
+          main #area01 #main_field #items_list .list_box a:hover, main #area01 #main_field #items_list .recent_items_box a:hover, main #area01 #main_field #recent_items .list_box a:hover, main #area01 #main_field #recent_items .recent_items_box a:hover {
+            opacity: 0.75; }
+        main #area01 #main_field #items_list .list_box .list_pct, main #area01 #main_field #items_list .list_box .rec_pct, main #area01 #main_field #items_list .recent_items_box .list_pct, main #area01 #main_field #items_list .recent_items_box .rec_pct, main #area01 #main_field #recent_items .list_box .list_pct, main #area01 #main_field #recent_items .list_box .rec_pct, main #area01 #main_field #recent_items .recent_items_box .list_pct, main #area01 #main_field #recent_items .recent_items_box .rec_pct {
+          width: -moz-calc(100% - 14px);
+          width: -o-calc(100% - 14px);
+          width: -webkit-calc(100% - 14px);
+          width: calc(100% - 14px);
+          padding: 7px;
+          padding-bottom: 0; }
+        main #area01 #main_field #items_list .list_box p, main #area01 #main_field #items_list .recent_items_box p, main #area01 #main_field #recent_items .list_box p, main #area01 #main_field #recent_items .recent_items_box p {
+          font-size: 12px;
+          font-size: 1.2rem;
+          color: #524b3b;
+          text-align: left;
+          margin: 7px;
+          margin-top: 0; }
+      @media (min-width: 550px) {
+        main #area01 #main_field #items_list .list_box, main #area01 #main_field #items_list .recent_items_box, main #area01 #main_field #recent_items .list_box, main #area01 #main_field #recent_items .recent_items_box {
+          width: -moz-calc(33.3333% - 4px);
+          width: -o-calc(33.3333% - 4px);
+          width: -webkit-calc(33.3333% - 4px);
+          width: calc(33.3333% - 4px); } }
+    main #area01 #main_field #shopping_guide {
       font-size: 12px;
       font-size: 1.2rem; }
-      section #main #shopping_guide .title .pc {
-        display: none; }
-      section #main #shopping_guide .containar .guide_box {
-        height: auto;
-        overflow: hidden;
+      main #area01 #main_field #shopping_guide #wrapper .guide_box {
         width: -moz-calc(100% - 4px);
         width: -o-calc(100% - 4px);
         width: -webkit-calc(100% - 4px);
         width: calc(100% - 4px);
-        margin: 2px;
-        margin-bottom: 20px;
         background-color: #ffffff;
-        text-align: left; }
-        section #main #shopping_guide .containar .guide_box ul {
-          list-style-type: square;
+        text-align: left;
+        padding-bottom: 10px;
+        border: 1px solid #f9f8f6; }
+        main #area01 #main_field #shopping_guide #wrapper .guide_box h3 {
+          margin: 10px;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #8a8168; }
+        main #area01 #main_field #shopping_guide #wrapper .guide_box div {
+          margin-left: 10px; }
+          main #area01 #main_field #shopping_guide #wrapper .guide_box div img {
+            width: 50%; }
+        main #area01 #main_field #shopping_guide #wrapper .guide_box ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
           color: #887f69; }
-          section #main #shopping_guide .containar .guide_box ul span {
-            color: #524b3b; }
-        section #main #shopping_guide .containar .guide_box ul li p .guide_pct {
-          width: -moz-calc(100% - 2px);
-          width: -o-calc(100% - 2px);
-          width: -webkit-calc(100% - 2px);
-          width: calc(100% - 2px);
-          margin: 1px; }
-      @media (min-width: 600px) {
-        section #main #shopping_guide {
+          main #area01 #main_field #shopping_guide #wrapper .guide_box ul li {
+            font-weight: bold;
+            margin: 5px 10px; }
+            main #area01 #main_field #shopping_guide #wrapper .guide_box ul li span {
+              color: #524b3b;
+              font-weight: normal; }
+            main #area01 #main_field #shopping_guide #wrapper .guide_box ul li img {
+              width: 95%; }
+      @media (min-width: 550px) {
+        main #area01 #main_field #shopping_guide {
           text-align: center; }
-          section #main #shopping_guide .title .sp {
+          main #area01 #main_field #shopping_guide .title .sp {
             display: none; }
-          section #main #shopping_guide .title .pc {
+          main #area01 #main_field #shopping_guide .title .pc {
             display: block; }
-            section #main #shopping_guide .title .pc img {
+            main #area01 #main_field #shopping_guide .title .pc img {
               width: 100%; }
-          section #main #shopping_guide .containar .guide_box {
-            width: -moz-calc(50% - 4px);
-            width: -o-calc(50% - 4px);
-            width: -webkit-calc(50% - 4px);
-            width: calc(50% - 4px);
-            float: left; }
-          section #main #shopping_guide .clearfix::after {
-            content: '';
-            display: block;
-            clear: both; } }
-  section #sidebar {
+          main #area01 #main_field #shopping_guide #wrapper {
+            overflow: hidden;
+            *zoom: 1; }
+            main #area01 #main_field #shopping_guide #wrapper .guide_box {
+              height: 230px;
+              width: -moz-calc(50% - 4px);
+              width: -o-calc(50% - 4px);
+              width: -webkit-calc(50% - 4px);
+              width: calc(50% - 4px);
+              float: left; } }
+    @media (min-width: 550px) {
+      main #area01 #main_field {
+        width: 74%;
+        float: left;
+        margin-right: 4%;
+        margin-bottom: 0; } }
+  main #area01 #sub_field {
     width: 100%;
-    box-sizing: border-box; }
-    section #sidebar .sub_box {
+    box-sizing: border-box;
+    /* PC VIEW ---------------------------*/ }
+    main #area01 #sub_field .sub_box {
       margin-bottom: 10px;
       background-color: #ffffff; }
-    section #sidebar .subtitle {
+    main #area01 #sub_field .subtitle {
       background-color: #887f69;
-      padding: 15px 0 15px 0;
-      padding-left: 20px; }
-  @media (min-width: 600px) {
-    section #main {
-      width: calc(70% - 40px);
-      float: left;
-      margin: 0 20px; }
-    section #sidebar {
-      width: calc(30% - 40px);
-      float: left;
-      margin-right: 20px; }
-    section .pc {
-      display: block; }
-    section .sp {
-      display: none; }
-    section .clearfix::after {
-      content: '';
-      display: block;
-      clear: both; } }
-  section #sidebar {
-    /*link*/
-    /*categories*/
-    /* about */
-    /*shopinfo*/ }
-    section #sidebar #search_box {
-      background-color: #ffffff;
-      padding-bottom: 13px;
-      padding: 15px; }
-      @media (max-width: 600px) {
-        section #sidebar #search_box {
-          margin-bottom: 5px;
-          background: #fff; } }
-      section #sidebar #search_box h4 {
-        margin-top: 0; }
-    section #sidebar dt input[type="search"] {
-      margin: auto;
-      padding: 3px 15% 3px 3%;
-      width: 82%;
-      height: 24px;
-      background: #eee;
-      font-size: 1.1rem;
-      position: relative;
-      z-index: 0;
-      -webkit-appearance: textfield;
-      box-sizing: content-box;
-      border: none; }
-    section #sidebar dd input[type="image"] {
-      float: right;
-      margin: -24px 5px 0 0;
-      position: relative;
-      z-index: 100;
-      height: 18px; }
-    section #sidebar #link .subtitle {
+      padding: 20px 15px;
+      font-size: 1.3rem;
+      color: #fff; }
+    main #area01 #sub_field #link .subtitle, main #area01 #sub_field #categories .subtitle {
       background-image: url("../images/top/next_icon.png");
       background-position: 95% center;
       background-repeat: no-repeat; }
-    section #sidebar #link #list {
+      @media (min-width: 550px) {
+        main #area01 #sub_field #link .subtitle:hover, main #area01 #sub_field #categories .subtitle:hover {
+          background: #b7b1a1;
+          background-image: url("../images/top/next_icon.png");
+          background-position: 95% center;
+          background-repeat: no-repeat;
+          cursor: pointer; } }
+    @media (min-width: 550px) {
+      main #area01 #sub_field {
+        width: 22%;
+        float: left; } }
+  main #area01 #sub_field {
+    /* link & categories */
+    /* about & shopinfo*/ }
+    main #area01 #sub_field #search_box {
+      background-color: #ffffff;
+      padding-bottom: 13px;
+      padding: 15px; }
+      @media (min-width: 550px) {
+        main #area01 #sub_field #search_box {
+          background: #fff; } }
+      main #area01 #sub_field #search_box form h4 {
+        display: none;
+        font-size: 13px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #887f69;
+        margin-top: 0;
+        margin-bottom: 5px; }
+        @media (min-width: 550px) {
+          main #area01 #sub_field #search_box form h4 {
+            display: block; } }
+      main #area01 #sub_field #search_box form dl {
+        margin: 0;
+        position: relative; }
+        main #area01 #sub_field #search_box form dl dt input[type="search"] {
+          padding: 3px 15% 3px 3%;
+          width: 82%;
+          height: 24px;
+          background: #eee;
+          box-sizing: content-box;
+          border: none; }
+        main #area01 #sub_field #search_box form dl dd {
+          position: absolute;
+          top: 7px;
+          right: 5px; }
+    main #area01 #sub_field #link .inner_list, main #area01 #sub_field #categories .inner_list {
       list-style: none;
       padding: 0;
-      display: none; }
-      section #sidebar #link #list li {
+      display: none;
+      margin: 0; }
+      main #area01 #sub_field #link .inner_list li, main #area01 #sub_field #categories .inner_list li {
         margin: 0;
         border-bottom: 1px solid #f9f8f6; }
-        section #sidebar #link #list li a {
+        main #area01 #sub_field #link .inner_list li a, main #area01 #sub_field #categories .inner_list li a {
           font-size: 12px;
           font-size: 1.2rem;
-          text-decoration: none;
           color: #524b3b;
           display: block;
           padding: 10px 15px;
           background-image: url("../images/top/next_icon_gray.png");
           background-position: 95% center;
           background-repeat: no-repeat; }
-    section #sidebar #categories .subtitle {
-      background-image: url("../images/top/next_icon.png");
-      background-position: 95% center;
-      background-repeat: no-repeat; }
-    section #sidebar #categories #list {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-      display: none; }
-      section #sidebar #categories #list li {
-        border-bottom: solid 1px #f9f8f6;
-        padding: 10px 15px;
-        background-image: url("../images/top/next_icon_gray.png");
-        background-repeat: no-repeat;
-        background-position: 95% center;
-        margin-bottom: 1px;
-        background-color: #ffffff;
-        font-size: 12px;
-        font-size: 1.2rem; }
-        section #sidebar #categories #list li a {
-          text-decoration: none;
-          display: block;
-          color: #524b3b; }
-    section #sidebar #about {
-      height: auto;
-      overflow: hidden;
+          @media (min-width: 550px) {
+            main #area01 #sub_field #link .inner_list li a:hover, main #area01 #sub_field #categories .inner_list li a:hover {
+              background: #eee;
+              background-image: url("../images/top/next_icon_gray.png");
+              background-position: 95% center;
+              background-repeat: no-repeat; } }
+    main #area01 #sub_field #about, main #area01 #sub_field #shopinfo {
       background-color: #ffffff; }
-      section #sidebar #about .about_box {
+      main #area01 #sub_field #about .about_box, main #area01 #sub_field #about .info_box, main #area01 #sub_field #shopinfo .about_box, main #area01 #sub_field #shopinfo .info_box {
+        overflow: hidden;
+        *zoom: 1;
         width: -moz-calc(100% - 20px);
         width: -o-calc(100% - 20px);
         width: -webkit-calc(100% - 20px);
         width: calc(100% - 20px);
-        margin: 5px;
-        padding: 5px; }
-        section #sidebar #about .about_box .inbox {
+        padding: 10px; }
+        main #area01 #sub_field #about .about_box .inbox_right, main #area01 #sub_field #about .info_box .inbox_right, main #area01 #sub_field #shopinfo .about_box .inbox_right, main #area01 #sub_field #shopinfo .info_box .inbox_right {
+          padding-left: 20px; }
+        main #area01 #sub_field #about .about_box .inbox_left, main #area01 #sub_field #about .about_box .inbox_right, main #area01 #sub_field #about .info_box .inbox_left, main #area01 #sub_field #about .info_box .inbox_right, main #area01 #sub_field #shopinfo .about_box .inbox_left, main #area01 #sub_field #shopinfo .about_box .inbox_right, main #area01 #sub_field #shopinfo .info_box .inbox_left, main #area01 #sub_field #shopinfo .info_box .inbox_right {
           float: left;
           width: -moz-calc(50% - 10px);
           width: -o-calc(50% - 10px);
           width: -webkit-calc(50% - 10px);
           width: calc(50% - 10px);
-          margin: 5px; }
-          section #sidebar #about .about_box .inbox .about_pct {
-            width: -moz-calc(100% - 10px);
-            width: -o-calc(100% - 10px);
-            width: -webkit-calc(100% - 10px);
-            width: calc(100% - 10px);
-            margin: 5px; }
-          section #sidebar #about .about_box .inbox .comment {
+          /*MOREボタン*/ }
+          main #area01 #sub_field #about .about_box .inbox_left .about_pct, main #area01 #sub_field #about .about_box .inbox_left .info_pct, main #area01 #sub_field #about .about_box .inbox_right .about_pct, main #area01 #sub_field #about .about_box .inbox_right .info_pct, main #area01 #sub_field #about .info_box .inbox_left .about_pct, main #area01 #sub_field #about .info_box .inbox_left .info_pct, main #area01 #sub_field #about .info_box .inbox_right .about_pct, main #area01 #sub_field #about .info_box .inbox_right .info_pct, main #area01 #sub_field #shopinfo .about_box .inbox_left .about_pct, main #area01 #sub_field #shopinfo .about_box .inbox_left .info_pct, main #area01 #sub_field #shopinfo .about_box .inbox_right .about_pct, main #area01 #sub_field #shopinfo .about_box .inbox_right .info_pct, main #area01 #sub_field #shopinfo .info_box .inbox_left .about_pct, main #area01 #sub_field #shopinfo .info_box .inbox_left .info_pct, main #area01 #sub_field #shopinfo .info_box .inbox_right .about_pct, main #area01 #sub_field #shopinfo .info_box .inbox_right .info_pct {
+            width: 100%; }
+          main #area01 #sub_field #about .about_box .inbox_left .comment, main #area01 #sub_field #about .about_box .inbox_right .comment, main #area01 #sub_field #about .info_box .inbox_left .comment, main #area01 #sub_field #about .info_box .inbox_right .comment, main #area01 #sub_field #shopinfo .about_box .inbox_left .comment, main #area01 #sub_field #shopinfo .about_box .inbox_right .comment, main #area01 #sub_field #shopinfo .info_box .inbox_left .comment, main #area01 #sub_field #shopinfo .info_box .inbox_right .comment {
             font-size: 12px;
             font-size: 1.2rem;
             text-align: left; }
-          section #sidebar #about .about_box .inbox .button {
+          main #area01 #sub_field #about .about_box .inbox_left .button, main #area01 #sub_field #about .about_box .inbox_right .button, main #area01 #sub_field #about .info_box .inbox_left .button, main #area01 #sub_field #about .info_box .inbox_right .button, main #area01 #sub_field #shopinfo .about_box .inbox_left .button, main #area01 #sub_field #shopinfo .about_box .inbox_right .button, main #area01 #sub_field #shopinfo .info_box .inbox_left .button, main #area01 #sub_field #shopinfo .info_box .inbox_right .button {
             text-align: center; }
-            section #sidebar #about .about_box .inbox .button .more_btn {
-              width: -moz-calc(60% - 2px);
-              width: -o-calc(60% - 2px);
-              width: -webkit-calc(60% - 2px);
-              width: calc(60% - 2px);
-              margin: 30px 1px 0 1px; }
-      section #sidebar #about .clearfix::after {
-        content: '';
-        display: block;
-        clear: both; }
-      @media (min-width: 600px) {
-        section #sidebar #about .about_box .inbox {
-          clear: both;
-          width: -moz-calc(100% - 10px);
-          width: -o-calc(100% - 10px);
-          width: -webkit-calc(100% - 10px);
-          width: calc(100% - 10px);
-          margin: 5px; }
-          section #sidebar #about .about_box .inbox .button .more_btn {
-            width: -moz-calc(50% - 10px);
-            width: -o-calc(50% - 10px);
-            width: -webkit-calc(50% - 10px);
-            width: calc(50% - 10px);
-            margin: 5px; } }
-    section #sidebar #shopinfo {
-      height: auto;
-      overflow: hidden;
-      background-color: #ffffff; }
-      section #sidebar #shopinfo .info_box {
-        width: -moz-calc(100% - 20px);
-        width: -o-calc(100% - 20px);
-        width: -webkit-calc(100% - 20px);
-        width: calc(100% - 20px);
-        margin: 5px;
-        padding: 5px; }
-        section #sidebar #shopinfo .info_box .inbox {
-          float: left;
-          width: -moz-calc(50% - 10px);
-          width: -o-calc(50% - 10px);
-          width: -webkit-calc(50% - 10px);
-          width: calc(50% - 10px);
-          margin: 5px; }
-          section #sidebar #shopinfo .info_box .inbox .info_pct {
-            width: -moz-calc(100% - 10px);
-            width: -o-calc(100% - 10px);
-            width: -webkit-calc(100% - 10px);
-            width: calc(100% - 10px);
-            margin: 5px; }
-          section #sidebar #shopinfo .info_box .inbox .comment {
-            font-size: 12px;
-            font-size: 1.2rem;
-            text-align: left; }
-          section #sidebar #shopinfo .info_box .inbox .button {
-            text-align: center; }
-            section #sidebar #shopinfo .info_box .inbox .button .more_btn {
-              width: -moz-calc(60% - 2px);
-              width: -o-calc(60% - 2px);
-              width: -webkit-calc(60% - 2px);
-              width: calc(60% - 2px);
-              margin: 30px 1px 0 1px; }
-      section #sidebar #shopinfo .clearfix::after {
-        content: '';
-        display: block;
-        clear: both; }
-      @media (min-width: 600px) {
-        section #sidebar #shopinfo .info_box .inbox {
-          clear: both;
-          width: -moz-calc(100% - 10px);
-          width: -o-calc(100% - 10px);
-          width: -webkit-calc(100% - 10px);
-          width: calc(100% - 10px);
-          margin: 5px; }
-          section #sidebar #shopinfo .info_box .inbox .button .more_btn {
-            width: -moz-calc(50% - 10px);
-            width: -o-calc(50% - 10px);
-            width: -webkit-calc(50% - 10px);
-            width: calc(50% - 10px);
-            margin: 5px; } }
-  section #page_top {
-    text-align: center; }
-    @media (min-width: 600px) {
-      section #page_top {
-        text-align: right; } }
+            main #area01 #sub_field #about .about_box .inbox_left .button a, main #area01 #sub_field #about .about_box .inbox_right .button a, main #area01 #sub_field #about .info_box .inbox_left .button a, main #area01 #sub_field #about .info_box .inbox_right .button a, main #area01 #sub_field #shopinfo .about_box .inbox_left .button a, main #area01 #sub_field #shopinfo .about_box .inbox_right .button a, main #area01 #sub_field #shopinfo .info_box .inbox_left .button a, main #area01 #sub_field #shopinfo .info_box .inbox_right .button a {
+              display: inline-block;
+              padding: 5px 25px;
+              background: #8a8168;
+              -moz-border-radius: 28px;
+              -webkit-border-radius: 28px;
+              border-radius: 28px;
+              margin: 10px;
+              margin-bottom: 0;
+              color: #fff;
+              font-size: 13px;
+              font-size: 1.3rem; }
+              @media (min-width: 550px) {
+                main #area01 #sub_field #about .about_box .inbox_left .button a:hover, main #area01 #sub_field #about .about_box .inbox_right .button a:hover, main #area01 #sub_field #about .info_box .inbox_left .button a:hover, main #area01 #sub_field #about .info_box .inbox_right .button a:hover, main #area01 #sub_field #shopinfo .about_box .inbox_left .button a:hover, main #area01 #sub_field #shopinfo .about_box .inbox_right .button a:hover, main #area01 #sub_field #shopinfo .info_box .inbox_left .button a:hover, main #area01 #sub_field #shopinfo .info_box .inbox_right .button a:hover {
+                  background: #b7b1a1; } }
+      @media (min-width: 550px) {
+        main #area01 #sub_field #about .about_box .inbox_right, main #area01 #sub_field #about .info_box .inbox_right, main #area01 #sub_field #shopinfo .about_box .inbox_right, main #area01 #sub_field #shopinfo .info_box .inbox_right {
+          padding: 0; }
+        main #area01 #sub_field #about .about_box .inbox_left, main #area01 #sub_field #about .about_box .inbox_right, main #area01 #sub_field #about .info_box .inbox_left, main #area01 #sub_field #about .info_box .inbox_right, main #area01 #sub_field #shopinfo .about_box .inbox_left, main #area01 #sub_field #shopinfo .about_box .inbox_right, main #area01 #sub_field #shopinfo .info_box .inbox_left, main #area01 #sub_field #shopinfo .info_box .inbox_right {
+          width: 100%; }
+          main #area01 #sub_field #about .about_box .inbox_left .button .more_btn, main #area01 #sub_field #about .about_box .inbox_right .button .more_btn, main #area01 #sub_field #about .info_box .inbox_left .button .more_btn, main #area01 #sub_field #about .info_box .inbox_right .button .more_btn, main #area01 #sub_field #shopinfo .about_box .inbox_left .button .more_btn, main #area01 #sub_field #shopinfo .about_box .inbox_right .button .more_btn, main #area01 #sub_field #shopinfo .info_box .inbox_left .button .more_btn, main #area01 #sub_field #shopinfo .info_box .inbox_right .button .more_btn {
+            width: 50%; } }
+main #area02 {
+  /*page_top---------------------------*/ }
+  main #area02 #page_top {
+    text-align: center;
+    padding: 20px 0; }
+    @media (min-width: 550px) {
+      main #area02 #page_top {
+        text-align: right; }
+        main #area02 #page_top a img:hover {
+          opacity: 0.75; } }
 
+/*-----------------------------------------------------------
+
+    フッタ
+    
+-----------------------------------------------------------*/
 footer ul {
-  text-align: center; }
+  text-align: center;
+  padding: 20px 0 20px;
+  border-top: 1px solid #e2ddd4; }
 footer li {
-  display: inline;
-  margin: 0 5px; }
-  footer li a {
-    text-decoration: none;
-    color: #524b3b; }
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.9; }
+  footer li a:hover {
+    color: #776d56; }
 footer p {
   text-align: center;
-  font-size: 20px;
-  font-size: 2rem;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-size: 1.2rem;
   color: #b8b4ac; }
-  @media (min-width: 600px) {
-    footer p {
-      font-size: 10px;
-      font-size: 1rem; } }
 
 /*# sourceMappingURL=list.css.map */

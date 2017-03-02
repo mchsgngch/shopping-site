@@ -53,15 +53,6 @@ body{
         color           : $fontcolor;
     }
 }
-div .arrows{
-    background-image: url("../images/top/foot_arroehead.png");
-    background-size: 4px 6px;
-    @media screen and (-webkit-min-device-pixel-ratio:2),
-                                  (min-resolution: 2dppx){
-                    background-image: url("../images/top/foot_arroehead@2x.png");
-    }
-    
-}
 
 /*-----------------------------------------------------------
 
