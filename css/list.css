@@ -130,6 +130,7 @@ main #area01 {
     /*パンくずリスト-------------------------*/
     /* banner -------------------------------*/
     /* items_list & recent_items-------------*/
+    /* ページボタン(pre,next)----------------*/
     /* shopping_guide -----------------------*/
     /* PC VIEW ------------------------------*/ }
     main #area01 #main_field .title {
@@ -207,7 +208,9 @@ main #area01 {
         width: -o-calc(50% - 2px);
         width: -webkit-calc(50% - 2px);
         width: calc(50% - 2px);
-        margin: 1px; }
+        margin: 1px;
+        /*商品画像-----------------------*/
+        /*商品説明-----------------------*/ }
         main #area01 #main_field #items_list .list_box a, main #area01 #main_field #items_list .recent_items_box a, main #area01 #main_field #recent_items .list_box a, main #area01 #main_field #recent_items .recent_items_box a {
           display: block; }
           main #area01 #main_field #items_list .list_box a:hover, main #area01 #main_field #items_list .recent_items_box a:hover, main #area01 #main_field #recent_items .list_box a:hover, main #area01 #main_field #recent_items .recent_items_box a:hover {
@@ -232,6 +235,24 @@ main #area01 {
           width: -o-calc(33.3333% - 4px);
           width: -webkit-calc(33.3333% - 4px);
           width: calc(33.3333% - 4px); } }
+    main #area01 #main_field #page_button {
+      margin-top: 15px;
+      overflow: hidden;
+      *zoom: 1; }
+      main #area01 #main_field #page_button a {
+        display: inline-block;
+        padding: 10px 40px;
+        font-size: 15px;
+        font-size: 1.5rem;
+        color: #fff;
+        background: #8a8168; }
+        @media (min-width: 550px) {
+          main #area01 #main_field #page_button a:hover {
+            opacity: 0.75; } }
+      main #area01 #main_field #page_button #back_button {
+        float: left; }
+      main #area01 #main_field #page_button #next_button {
+        float: right; }
     main #area01 #main_field #shopping_guide {
       font-size: 12px;
       font-size: 1.2rem; }
@@ -451,8 +472,9 @@ footer li {
   font-size: 12px;
   font-size: 1.2rem;
   line-height: 1.9; }
-  footer li a:hover {
-    color: #776d56; }
+  @media (min-width: 550px) {
+    footer li:hover {
+      color: #776d56; } }
 footer p {
   text-align: center;
   margin-bottom: 20px;
